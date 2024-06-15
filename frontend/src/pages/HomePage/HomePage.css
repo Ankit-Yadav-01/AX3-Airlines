@@ -1,0 +1,56 @@
+.home-page {
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  color: #333;
+}
+
+.introduction, .features, .destinations, .reviews, .coverage {
+  margin-bottom: 40px;
+}
+
+.introduction p, .features ul, .destinations .destination-cards, .reviews blockquote, .coverage p {
+  margin-top: 10px;
+  color: #666;
+}
+
+.features ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.destination-cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.card {
+  background-color: #eaeaea;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  width: 30%;
+}
+
+blockquote {
+  border-left: 5px solid #007bff;
+  padding-left: 10px;
+  color: #555;
+}
+
+.coverage p {
+  margin-top: 10px;
+  color: #666;
+}
