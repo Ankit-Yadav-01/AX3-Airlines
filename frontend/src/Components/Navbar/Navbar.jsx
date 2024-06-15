@@ -23,7 +23,7 @@ const Navbar = ({ user_info }) => {
           <li className={(!user_info || (Object.keys(user_info).length === 0 && user_info.constructor === Object)) ? "active" : "navbar-item"} ><Link state={{ user_info: data }} to="/profile">Profile</Link></li>
           <li className={((!user_info || (Object.keys(user_info).length === 0 && user_info.constructor === Object))) ? "navbar-item" : "active"}><Link to="/login">Login</Link></li>
           <li className={((!user_info || (Object.keys(user_info).length === 0 && user_info.constructor === Object))) ? "navbar-item" : "active"}><Link to="/signup">Signup</Link></li>
-          <li className="navbar-item" onClick={Logout}><Link to="/">Logout</Link></li>
+          <li className={(!user_info || (Object.keys(user_info).length === 0 && user_info.constructor === Object)) ? "active" : "navbar-item"}  onClick={Logout}><Link to="/">Logout</Link></li>
         </ul>
       </div>
     </div>
