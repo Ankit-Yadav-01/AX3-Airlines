@@ -10,24 +10,24 @@ Navigation: Easy navigation with a horizontal navbar.
 
 to start the project 
 run the commands
-npm install in all three folders
-npm install nodemon in backend folder
-npm install dotenv in backend folder
+"npm install" in all three folders
+"npm install nodemon" in backend folder
+"npm install dotenv" in backend folder
 
 
 
 to start each frontend run the command
-npm run dev 
+"npm run dev" 
 in frontend
 and 
-npm run dev 
+"npm run server"
 in backend 
 using 2 integrated terminal
 
 to start each admin run the command
-npm run dev 
+"npm run dev" 
 in admin
-npm run dev 
+"npm run server"
 in backend 
 using 2 integrated terminal
 
