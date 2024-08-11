@@ -62,7 +62,7 @@ exports.get_Flights = async (req , res) =>{
     if (flight) {
       res.status(200).send(flight);
     } else {
-      res.status(401).json({ message: 'Invalid credentials' });
+      res.status(401).json({ message: 'No Flights available' });
     }    
   } catch (error) {
     console.error('Error during fetching fligh_info:', error);
