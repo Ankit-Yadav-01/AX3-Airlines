@@ -30,6 +30,10 @@ mongoose.connect(mongoURI)
   .catch(err => console.error('MongoDB connection error:', err));
 
 // Define routes
+app.get('/', (req, res) => {
+  res.send('API is running...');
+});
+
 app.post('/signup', signup);
 app.post('/add_flight', add_flight);
 app.post('/get_Flights', get_Flights);
