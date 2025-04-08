@@ -58,7 +58,7 @@ function TimeDifference(time1, time2) {
 
 
           <div className='Flight_Card_Pic'>
-          <div className='Fligh_Card_Duration'>{${date_duration} days : ${time_duration.hours} hours:${time_duration.minutes} minutes}</div>
+          <div className='Fligh_Card_Duration'>{`${date_duration} days : ${time_duration.hours} hours:${time_duration.minutes} minutes`}</div>
           <div className='Flight_Card_Single_Line'></div>
           <div><img className='Flight_Card_Little_Plane' width={20} src="https://cdn.iconscout.com/icon/free/png-512/free-airplane-12-84063.png?f=webp&w=256" alt="" /></div>
           </div>
