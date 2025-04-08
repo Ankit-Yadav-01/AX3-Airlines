@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './AddFlightPage.css';
 
 const AddFlightPage = () => {
+  const backendUrl = import.meta.env.VITE_BACKEND_URL
   const [flightData, setFlightData] = useState({
     num: '',
     departcitycode: '',
@@ -40,8 +41,8 @@ const AddFlightPage = () => {
     };
 
     try {
-      const response = await fetch('http://localhost:3001/add_flight', {
-        method: 'POST',
+      const response = await fetch(backendUrl+'add_flight', {
+        method: 'Post',
         headers: {
           'Content-Type': 'application/json',
         },

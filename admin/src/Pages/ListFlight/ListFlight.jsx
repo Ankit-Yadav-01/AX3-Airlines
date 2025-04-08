@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import './ListFlight.css'
 const ListFlight = () => {
-
+  const backendUrl = import.meta.env.VITE_BACKEND_URL
   const [flights, setFlights] = useState([]);
 
   const fetchAllFlights = async () => {
     try {
-      const response = await fetch('http://localhost:3001/list_all_flight', {
+      const response = await fetch(backendUrl+'list_all_flight', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -27,7 +27,7 @@ const ListFlight = () => {
   const Handle_Flight_Delete = async (flight) => {
     try {
       const postData = { items: flight }
-      const response = await fetch('http://localhost:3001/delete_flight', {
+      const response = await fetch(backendUrl+'delete_flight', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
