@@ -6,6 +6,7 @@ import { useLocation } from 'react-router-dom';
 import arrow from '../../assets/FlightPagePics/arrow.svg';
 
 const FlightPage = () => {
+  const backendUrl = import.meta.env.VITE_BACKEND_URL
   const [flight_container, setflight_container] = useState([]);
   const [FlightData, setFlightData] = useState({
     from: '',
@@ -24,7 +25,7 @@ const FlightPage = () => {
     e.preventDefault();
     const postData = { from: FlightData.from, to: FlightData.to, date: FlightData.date };
     try {
-      const response = await fetch('http://localhost:3001/get_Flights', {
+      const response = await fetch(backendUrl+'get_Flights', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -3,7 +3,7 @@ import './Rating.css'
 import star from '../../assets/RatingStar/star.svg'
 
 const Rating = ({ items, Update_Book_Page }) => {
-
+  const backendUrl = import.meta.env.VITE_BACKEND_URL
   const [arr, setarr] = useState(items.Rating)
   const [s5, sets5] = useState(0)
   const [s4, sets4] = useState(0)
@@ -71,7 +71,7 @@ const Rating = ({ items, Update_Book_Page }) => {
     }
     const postData = { items: items, index: index }
     try {
-      const response = await fetch('http://localhost:3001/Update_Rating', {
+      const response = await fetch(backendUrl+'Update_Rating', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

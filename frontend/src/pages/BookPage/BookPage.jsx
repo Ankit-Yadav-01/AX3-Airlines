@@ -9,6 +9,7 @@ import Review from '../../Components/Review/Review';
 import Rating from '../../Components/Rating/Rating';
 
 const BookPage = () => {
+  const backendUrl = import.meta.env.VITE_BACKEND_URL
   const { state } = useLocation();
   const user_info = state.pass_user_info;
 
@@ -32,7 +33,7 @@ const BookPage = () => {
   const Get_Flight_Data = async () => {
     const postData = {items : prev_items}
     try {  
-      const response = await fetch('http://localhost:3001/get_Updated_Flight', {
+      const response = await fetch(backendUrl+'get_Updated_Flight', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

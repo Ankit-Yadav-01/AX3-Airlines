@@ -4,6 +4,7 @@ import Navbar from '../../Components/Navbar/Navbar';
 import {useNavigate } from 'react-router-dom' 
 
 const ProfilePage = ({ user_info }) => {
+  const backendUrl = import.meta.env.VITE_BACKEND_URL
   const navigate=useNavigate()
   console.log(user_info)
   if(!user_info || (Object.keys(user_info).length === 0 && user_info.constructor === Object)){
@@ -21,7 +22,7 @@ const ProfilePage = ({ user_info }) => {
 
   const fetchUpcomingFlights = async () => {
     try {
-      const response = await fetch('http://localhost:3001/get_user_profile', {
+      const response = await fetch(backendUrl+'get_user_profile', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -42,7 +43,7 @@ const ProfilePage = ({ user_info }) => {
   const Handle_Cancle_Flight = async (flight , user_info) =>{
     try {
       const postData = {items : flight , user_info : user_info}
-      const response = await fetch('http://localhost:3001/cancle_flight', {
+      const response = await fetch(backendUrl+'cancle_flight', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

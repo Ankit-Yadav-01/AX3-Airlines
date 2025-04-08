@@ -4,6 +4,7 @@ import './LoginPage.css';
 import Navbar from '../../Components/Navbar/Navbar';
 
 const LoginPage = () => {
+  const backendUrl = import.meta.env.VITE_BACKEND_URL
   const navigate = useNavigate();
   const [credentials, setCredentials] = useState({ email: '', password: '' });
   const [user, setUser] = useState({}); 
@@ -17,7 +18,7 @@ const LoginPage = () => {
     e.preventDefault();
     const postData = { email: credentials.email, password: credentials.password };
     try {
-      const response = await fetch('http://localhost:3001/get_user_profile', {
+      const response = await fetch(backendUrl+'get_user_profile', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

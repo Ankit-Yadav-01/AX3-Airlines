@@ -4,7 +4,7 @@ import EachReview from '../EachReview/EachReview';
 
 const Review = ({ items, user_info , Update_Book_Page}) => {
     const [pov, setPov] = useState('');
-
+    const backendUrl = import.meta.env.VITE_BACKEND_URL
     const handleChange = (e) => {
         const { name, value } = e.target;
         setPov({ [name]: value });
@@ -21,7 +21,7 @@ const Review = ({ items, user_info , Update_Book_Page}) => {
             e.preventDefault()
         const postData = { items: items , user : user_info.name , words : pov.pov};
         try { 
-            const response = await fetch('http://localhost:3001/get_comment_update', {
+            const response = await fetch(backendUrl+'get_comment_update', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

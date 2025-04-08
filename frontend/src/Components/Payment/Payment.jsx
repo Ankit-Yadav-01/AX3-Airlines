@@ -3,7 +3,7 @@ import './Payment.css'
 
 const Payment = ({ items, selected_seat, user_info, Update_Book_Page }) => {
 
-
+  const backendUrl = import.meta.env.VITE_BACKEND_URL
 
   const [bank , setbank] = useState({
     card_num : '',
@@ -35,7 +35,7 @@ const Payment = ({ items, selected_seat, user_info, Update_Book_Page }) => {
       e.preventDefault();
       const postData = { user_info, items, selected_seat }
       try {
-        const response = await fetch('http://localhost:3001/book_flight', {
+        const response = await fetch(backendUrl + 'book_flight', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

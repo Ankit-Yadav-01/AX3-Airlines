@@ -10,7 +10,7 @@ const SignupPage = () => {
     password: '',
     phoneNumber: ''
   });
-
+  const backendUrl = import.meta.env.VITE_BACKEND_URL
   const [user, setUser] = useState({});
 
   const handleChange = (e) => {
@@ -28,7 +28,7 @@ const SignupPage = () => {
       username: formData.username 
     };
     try {
-      const response = await fetch('http://localhost:3001/signup', {
+      const response = await fetch(backendUrl+'signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
