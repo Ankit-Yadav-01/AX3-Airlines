@@ -38,3 +38,9 @@ npm run admin
 
 to start user portal run command in main folder i.e AX3-Airline
 npm run user
+
+to run main airline website
+https://ax-3-airlines-r2ib.vercel.app/
+
+to run admin
+https://ax-3-airlines-okb3.vercel.app/
